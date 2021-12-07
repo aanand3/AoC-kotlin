@@ -16,3 +16,8 @@ fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest
  * Converts List of String to List of Int
  */
 fun listToInt(input: List<String>) = input.map { it.toInt() }
+
+/**
+ * Reads comma separated strings from the given input txt file
+ */
+fun readCommaSeparated(name: String): List<String> = File("src", "$name.txt").readText().split(",")
